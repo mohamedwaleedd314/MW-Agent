@@ -56,13 +56,6 @@ def handle_chat(message, history):
             [{"role": msg["role"], "content": msg["content"]} for msg in chat_history],
             ""
         )
-        
-        
-    chat_history[-1]["content"] = partial_answer
-    yield (
-            [{"role": msg["role"], "content": msg["content"]} for msg in chat_history],
-            ""
-        )
 
 def clear_chat():
     global chat_history
